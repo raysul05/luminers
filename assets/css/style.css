@@ -253,7 +253,8 @@ main {
   padding-left: 190px;
 } */
 main {
-  background: url(assets/img/backg.jpeg) repeat;padding-left: 190px;
+  background: url(../../assets/img/backg.jpeg) 
+    repeat;padding-left: 190px;
 }
 
 /* main {
