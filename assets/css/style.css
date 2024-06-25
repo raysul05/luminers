@@ -124,7 +124,7 @@
 /* body-color */
 
 body {
-  color: #333;
+  color: #580770;
   font-size: 18px;
 }
 
@@ -207,7 +207,7 @@ html, body {
 }
 
 body {
-  background: url("https://opengameart.org/sites/default/files/512x512_purple_nebula_1.png") repeat; 
+  background: url() repeat; 
   animation: scrollBackground 10s linear infinite; 
 }
 
@@ -224,10 +224,46 @@ main {
   padding-left: 190px;
   position: relative;
 } */
+/* html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
+}
+
 main {
+  background: url("../../assets/img/bg2.jpg") repeat; 
+  padding-left: 190px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: scrollBackground 30s linear infinite; 
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%; 
+  }
+} */
+
+
+ 
+/* main {
   background: url(../../assets/img/bg.png) repeat;
   padding-left: 190px;
+} */
+main {
+  background: url(assets/img/backg.jpeg) repeat;padding-left: 190px;
 }
+
+/* main {
+  background: url(
+    
+  ) repeat;
+  padding-left: 190px;
+} */
 
 
 dl {
@@ -283,7 +319,7 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
 } */
 
 ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
+  background-color: #d298e9;
   border-bottom: 1px solid #ddd;
   box-sizing: content-box;
   min-height: 90px;
@@ -296,7 +332,7 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
+  background-color: #de88f0;
   border-left: 3px solid;
 }
 
@@ -351,7 +387,7 @@ h3 {
 }
 
 #intro.section .container {
-  color: white;
+  color: rgb(178, 143, 218);
   font-weight: 200;
   left: 0;
   position: absolute;
