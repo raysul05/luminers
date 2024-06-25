@@ -199,7 +199,7 @@ nav i {
   padding-left: 190px;
 } */
 
-
+/* 
 html, body {
   height: 100%;
   margin: 0;
@@ -207,22 +207,26 @@ html, body {
 }
 
 body {
-  background: url("https://opengameart.org/sites/default/files/512x512_purple_nebula_1.png") repeat; /* Background image */
-  animation: scrollBackground 10s linear infinite; /* Animation for scrolling background */
+  background: url("https://opengameart.org/sites/default/files/512x512_purple_nebula_1.png") repeat; 
+  animation: scrollBackground 10s linear infinite; 
 }
 
 @keyframes scrollBackground {
   0% {
-    background-position: 0 0; /* Initial position */
+    background-position: 0 0; 
   }
   100% {
-    background-position: 0 100%; /* Moves background by 100% of its height */
+    background-position: 0 100%;
   }
 }
 
 main {
   padding-left: 190px;
   position: relative;
+} */
+main {
+  background: url(../../assets/img/bg.png) repeat;
+  padding-left: 190px;
 }
 
 
