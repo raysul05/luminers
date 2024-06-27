@@ -43,10 +43,10 @@ const enableButtons = () => {
 // This function is executed when a player wins
 const winFunction = (letter) => {
   disableButtons();
-  if (letter == "X") {
-    msgRef.innerHTML = "&#x1F389; <br> 'A' Ai Wins";
-  } else {
+  if (letter == "H") {
     msgRef.innerHTML = "&#x1F389; <br> 'H' Human Wins";
+  } else {
+    msgRef.innerHTML = "&#x1F389; <br> 'A' Ai Wins";
   }
 };
 
