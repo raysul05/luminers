@@ -106,9 +106,10 @@ html {
 }
 
 .popup {
-  background: linear-gradient(135deg, #8052ec, #d161ff);
+  background: #8052ec;
   height: 100%;
   width: 100%;
+  opacity: .7;
   position: absolute;
   display: flex;
   z-index: 2;
