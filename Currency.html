@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="assets/css/nuri.css">
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <button onclick="window.location.href = 'https://raysul05.github.io/luminers'">Home</button>
+    </header>
+    <div class="container">
+        <div class="input-section">
+            <h2>Input</h2>
+            <input type="number" id="amount" placeholder="Enter amount">
+            <div class="currency-selector" id="fromCurrencyContainer">
+                <select id="fromCurrency" onchange="updateFlag('from')"></select>
+                <img id="fromFlag" class="flag" src="" alt="Flag">
+            </div>
+        </div>
+        <div class="output-section">
+            <h2>Output</h2>
+            <div id="resultBox">
+                <p id="result"></p>
+            </div>
+            <div class="currency-selector" id="toCurrencyContainer">
+                <select id="toCurrency" onchange="updateFlag('to')"></select>
+                <img id="toFlag" class="flag" src="" alt="Flag">
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button onclick="convertCurrency()">Convert</button>
+    </div>
+    <script src="assets/css/nuri.js"></script>
+</body>
+</html>

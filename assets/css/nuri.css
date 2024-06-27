@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+    animation: changeBackgroundColor 50s infinite; 
+}
+
+@keyframes changeBackgroundColor {
+    0%, 100% { background-color: #3498db; }
+    20% { background-color: #9b59b6; }
+    40% { background-color: #e74c3c; }
+    60% { background-color: #f1c40f; }
+    80% { background-color: #2ecc71; }
+}
+
+.container {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
+    width: 80%;
+    max-width: 900px;
+    justify-content: space-between;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.container:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);
+    transform: scale(1.02);
+}
+
+.input-section, .output-section {
+    flex: 1;
+    padding: 60px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section {
+    border-right: 1px solid #ddd;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 200px;
+}
+
+button {
+    cursor: pointer;
+    background-color:transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 20px 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.25);
+}
+
+.currency-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.currency-selector select {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.currency-selector select:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.flag {
+    width: 50px;
+    height: 30px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+}
+
+#resultBox {
+    border: 1px solid #000000;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+#result {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-container button {
+    width: 100%;
+    max-width: 200px;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+header button:hover {
+    text-decoration: underline;
+}

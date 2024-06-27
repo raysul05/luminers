@@ -1,0 +1,43 @@
+	project-folder/
+│
+├── index.html
+├── styles.css
+├── script.js
+└── flags/
+    ├── USD.png
+    ├── EUR.png
+    ├── GBP.png
+    ├── JPY.png
+    ├── AUD.png
+    ├── CAD.png
+    ├── CHF.png
+    ├── CNY.png
+    ├── SEK.png
+    ├── NZD.png
+    ├── MYR.png 
+    ├── BDT.png
+    ├── INR.png
+    ├── SGD.png
+    ├── HKD.png
+    ├── KRW.png
+    ├── BRL.png
+    ├── RUB.png
+    ├── TRY.png
+    ├── ZAR.png
+    ├── AED.png
+    ├── ARS.png
+    ├── CLP.png
+    ├── COP.png
+    ├── CZK.png
+    ├── DKK.png
+    ├── EGP.png
+    ├── HUF.png
+    ├── IDR.png
+    ├── JOD.png
+    ├── NOK.png
+    ├── PHP.png
+    ├── PLN.png
+    ├── SAR.png
+    ├── THB.png
+    ├── TWD.png
+    ├── VND.png
