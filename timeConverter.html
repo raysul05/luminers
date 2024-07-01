@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter</title>
+    <link rel="stylesheet" href="assets/css/styles_time.css">
+</head>
+<body>
+    <header>
+        <h1>Time Converter</h1>
+    </header>
+    
+    <main>
+        <section id="converter">
+            <div class="converter-box">
+                <h2>Time Converter</h2>
+                <form id="converter-form">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                    
+                    <label for="from-zone">From Time Zone:</label>
+                    <select id="from-zone" name="from-zone" required>
+                        <option value="UTC">UTC</option>
+                        <option value="USA (PST)">USA (PST)</option>
+                        <option value="USA (MST)">USA (MST)</option>
+                        <option value="USA (CST)">USA (CST)</option>
+                        <option value="USA (EST)">USA (EST)</option>
+                        <option value="Malaysia (GMT)">Malaysia (GMT)</option>
+                        <option value="India (IST)">India (IST)</option>
+                        <option value="Australia (AEST)">Australia (AEST)</option>
+                        <option value="Australia (ACST)">Australia (ACST)</option>
+                        <option value="Australia (AWST)">Australia (AWST)</option>
+                        <option value="Japan (JST)">Japan (JST)</option>
+                        <option value="UK (GMT)">UK (GMT)</option>
+                        <option value="Germany (CET)">Germany (CET)</option>
+                        <option value="France (CET)">France (CET)</option>
+                        <option value="China (CST)">China (CST)</option>
+                        <option value="Brazil (BRT)">Brazil (BRT)</option>
+                        <option value="South Africa (SAST)">South Africa (SAST)</option>
+                        <option value="New Zealand (NZST)">New Zealand (NZST)</option>
+                        <option value="Russia (MSK)">Russia (MSK)</option>
+                        <option value="Singapore (SGT)">Singapore (SGT)</option>
+                        <option value="Canada (NST)">Canada (NST)</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                    
+                    <label for="to-zone">To Time Zone:</label>
+                    <select id="to-zone" name="to-zone" required>
+                        <option value="UTC">UTC</option>
+                        <option value="USA (PST)">USA (PST)</option>
+                        <option value="USA (MST)">USA (MST)</option>
+                        <option value="USA (CST)">USA (CST)</option>
+                        <option value="USA (EST)">USA (EST)</option>
+                        <option value="Malaysia (GMT)">Malaysia (GMT)</option>
+                        <option value="India (IST)">India (IST)</option>
+                        <option value="Australia (AEST)">Australia (AEST)</option>
+                        <option value="Australia (ACST)">Australia (ACST)</option>
+                        <option value="Australia (AWST)">Australia (AWST)</option>
+                        <option value="Japan (JST)">Japan (JST)</option>
+                        <option value="UK (GMT)">UK (GMT)</option>
+                        <option value="Germany (CET)">Germany (CET)</option>
+                        <option value="France (CET)">France (CET)</option>
+                        <option value="China (CST)">China (CST)</option>
+                        <option value="Brazil (BRT)">Brazil (BRT)</option>
+                        <option value="South Africa (SAST)">South Africa (SAST)</option>
+                        <option value="New Zealand (NZST)">New Zealand (NZST)</option>
+                        <option value="Russia (MSK)">Russia (MSK)</option>
+                        <option value="Singapore (SGT)">Singapore (SGT)</option>
+                        <option value="Canada (NST)">Canada (NST)</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                    
+                    <button type="submit">Convert</button>
+                </form>
+                <p id="result"></p>
+                <button id="external-link-button" onclick="window.location.href = 'https://raysul05.github.io/luminers'">Go Home</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Time Converter</p>
+    </footer>
+    
+    <script src="assets/css/scripts_time.js"></script>
+</body>
+</html>
+

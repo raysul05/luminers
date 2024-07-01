@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="assets/css/style_area.css" />
+  </head>
+  <body>
+      <h1 class="title">Calculate Shape! </h1>
+      <p id="currentTime"></p>
+      <script src="assets/css/script_area.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            text-align: center;
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+            background-image: url('https://th.bing.com/th/id/OIP.D4y7jJrS1pziVqg3h7gKswHaEu?rs=1&pid=ImgDetMain');
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* Prevent background from repeating */
+            background-attachment: fixed; /* Fixed background image */
+        }
+        .container {
+            margin: 50px;
+        }
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+            margin: 0 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px; /* Added margin */
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .shape-container {
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+            text-align: left; /* Adjusted for formula display */
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .formula-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f0f0; /* Light gray background for formulas */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Area Calculator</h2>
+
+        <!-- Rectangle -->
+        <div class="shape-container">
+            <h3>Rectangle</h3>
+            <label for="rectWidth">Width:</label>
+            <input type="number" id="rectWidth">
+            <label for="rectHeight">Height:</label>
+            <input type="number" id="rectHeight">
+            <button onclick="calculateRectangle()">Calculate</button>
+            <p id="rectResult" class="result"></p>
+        </div>
+
+        <!-- Square -->
+        <div class="shape-container">
+            <h3>Square</h3>
+            <label for="squareSide">Side Length:</label>
+            <input type="number" id="squareSide">
+            <button onclick="calculateSquare()">Calculate</button>
+            <p id="squareResult" class="result"></p>
+        </div>
+
+        <!-- Triangle -->
+        <div class="shape-container">
+            <h3>Triangle</h3>
+            <label for="triBase">Base:</label>
+            <input type="number" id="triBase">
+            <label for="triHeight">Height:</label>
+            <input type="number" id="triHeight">
+            <button onclick="calculateTriangle()">Calculate</button>
+            <p id="triResult" class="result"></p>
+        </div>
+
+        <!-- Circle -->
+        <div class="shape-container">
+            <h3>Circle</h3>
+            <label for="circleRadius">Radius:</label>
+            <input type="number" id="circleRadius">
+            <button onclick="calculateCircle()">Calculate</button>
+            <p id="circleResult" class="result"></p>
+        </div>
+
+        <!-- Trapezium -->
+        <div class="shape-container">
+            <h3>Trapezium</h3>
+            <label for="trapBase1">Base 1:</label>
+            <input type="number" id="trapBase1">
+            <label for="trapBase2">Base 2:</label>
+            <input type="number" id="trapBase2">
+            <label for="trapHeight">Height:</label>
+            <input type="number" id="trapHeight">
+            <button onclick="calculateTrapezium()">Calculate</button>
+            <p id="trapResult" class="result"></p>
+        </div>
+
+        <!-- Formulas -->
+        <div class="formula-container">
+            <h3>Formulas:</h3>
+            <p><strong>Rectangle:</strong> Area = Width × Height</p>
+            <p><strong>Square:</strong> Area = Side Length × Side Length</p>
+            <p><strong>Triangle:</strong> Area = 0.5 × Base × Height</p>
+            <p><strong>Circle:</strong> Area = π × Radius × Radius</p>
+            <p><strong>Trapezium:</strong> Area = 0.5 × (Base1 + Base2) × Height</p>
+        </div>
+
+        <!-- Button for External Link -->
+        <button onclick="window.location.href = 'https://raysul05.github.io/luminers'">Go to Google</button>
+    </div>
+
+    <script>
+        // Rectangle Area Calculation
+        function calculateRectangle() {
+            var width = parseFloat(document.getElementById('rectWidth').value);
+            var height = parseFloat(document.getElementById('rectHeight').value);
+            var area = width * height;
+            document.getElementById('rectResult').innerText = 'Area: ' + area;
+        }
+
+        // Square Area Calculation
+        function calculateSquare() {
+            var side = parseFloat(document.getElementById('squareSide').value);
+            var area = side * side;
+            document.getElementById('squareResult').innerText = 'Area: ' + area;
+        }
+
+        // Triangle Area Calculation
+        function calculateTriangle() {
+            var base = parseFloat(document.getElementById('triBase').value);
+            var height = parseFloat(document.getElementById('triHeight').value);
+            var area = 0.5 * base * height;
+            document.getElementById('triResult').innerText = 'Area: ' + area;
+        }
+
+        // Circle Area Calculation
+        function calculateCircle() {
+            var radius = parseFloat(document.getElementById('circleRadius').value);
+            var area = Math.PI * radius * radius;
+            document.getElementById('circleResult').innerText = 'Area: ' + area.toFixed(2);
+        }
+
+        // Trapezium Area Calculation
+        function calculateTrapezium() {
+            var base1 = parseFloat(document.getElementById('trapBase1').value);
+            var base2 = parseFloat(document.getElementById('trapBase2').value);
+            var height = parseFloat(document.getElementById('trapHeight').value);
+            var area = 0.5 * (base1 + base2) * height;
+            document.getElementById('trapResult').innerText = 'Area: ' + area;
+        }
+    </script>
+</body>
+</html>
