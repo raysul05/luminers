@@ -6,7 +6,7 @@ document.getElementById('converter-form').addEventListener('submit', function(ev
     var fromTimeZone = document.getElementById('from-zone').value;
     var toTimeZone = document.getElementById('to-zone').value;
 
-    // Perform your time conversion logic here (replace with your actual conversion logic)
+    // Perform your time conversion logic here
     var convertedTime = convertTime(selectedTime, fromTimeZone, toTimeZone);
 
     // Function to convert time to 12-hour format with AM/PM
@@ -31,8 +31,53 @@ document.getElementById('converter-form').addEventListener('submit', function(ev
     document.getElementById('result').innerHTML = result;
 });
 
-// Replace this function with your actual time conversion logic
+// Function to convert time between time zones
 function convertTime(time, fromTimeZone, toTimeZone) {
-    // Replace with your actual conversion logic based on time zones
-    return time; // Placeholder return for demonstration
+    // Define time zone offsets in hours
+    const timeZones = {
+        'UTC': 0,
+        'USA (PST)': -8,
+        'USA (MST)': -7,
+        'USA (CST)': -6,
+        'USA (EST)': -5,
+        'Malaysia (GMT)': 8,
+        'India (IST)': 5.5,
+        'Australia (AEST)': 10,
+        'Australia (ACST)': 9.5,
+        'Australia (AWST)': 8,
+        'Japan (JST)': 9,
+        'UK (GMT)': 0,
+        'Germany (CET)': 1,
+        'France (CET)': 1,
+        'China (CST)': 8,
+        'Brazil (BRT)': -3,
+        'South Africa (SAST)': 2,
+        'New Zealand (NZST)': 12,
+        'Russia (MSK)': 3,
+        'Singapore (SGT)': 8,
+        'Canada (NST)': -3.5
+    };
+    
+    // Get offsets
+    const fromOffset = timeZones[fromTimeZone];
+    const toOffset = timeZones[toTimeZone];
+    
+    // Parse the time
+    const [hours, minutes] = time.split(':').map(Number);
+    
+    // Convert to UTC
+    let utcHours = hours - fromOffset;
+    if (utcHours < 0) utcHours += 24;
+    if (utcHours >= 24) utcHours -= 24;
+    
+    // Convert to destination time zone
+    let convertedHours = utcHours + toOffset;
+    if (convertedHours < 0) convertedHours += 24;
+    if (convertedHours >= 24) convertedHours -= 24;
+    
+    // Format the converted time
+    const formattedHours = convertedHours.toString().padStart(2, '0');
+    const formattedMinutes = minutes.toString().padStart(2, '0');
+    
+    return `${formattedHours}:${formattedMinutes}`;
 }
